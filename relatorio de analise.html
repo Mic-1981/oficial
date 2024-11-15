@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://cdn3d.iconscout.com/3d/premium/thumb/temperatura-fria-7807866-6263297.png?f=webp">
+    <title>Relatorio de analise</title>
+    <style>
+      body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+} 
+grafi{
+    display: inline-block;
+} 
+
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+   
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="relatorio de analise.html">Relatorio de Analise</a>
+        <a href="http://192.168.0.107/">Estufa Temperatura</a>
+        <a href="comando.html">Controles</a>
+        
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="https://www.gstatic.com/charts/loader.js"></script>
+      
+
+<div class="grafi">
+<canvas id="myChart" style="width:100%;max-width:600px;right: 50%;"></canvas>
+
+<script>
+  
+  const xValues = [0,1,2,3,4,5,6,7,];
+  
+  new Chart("myChart", {
+    type: "line",
+    data: {
+      labels: xValues,
+      datasets: [{ 
+        data: [15,16,14,14,15,16,17,18],
+        borderColor: "red",
+        fill: false       
+      }, { 
+        data: [15,14,14,13,14,15,14,17],
+        borderColor: "green",
+        fill: false
+      }, { 
+        data: [13,13,14,15,15,16,18,18],
+        borderColor: "blue",
+        fill: false
+        
+      }]
+    },
+    options: {
+      legend: {display: false} 
+    }
+  });
+</script>
+</div>
+<div>
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+<script>
+const xArray = ["Alface", "Couve-Flor", "Rucula", ];
+const yArray = [55, 49, 44, ];
+
+const layout = {title:"Produção"};
+
+const data = [{labels:xArray, values:yArray, type:"pie"}];
+
+Plotly.newPlot("myPlot", data, layout);
+</script>
+</div>
+  
+
+</body>
+</html>
+
+

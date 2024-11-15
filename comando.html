@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://cdn3d.iconscout.com/3d/premium/thumb/temperatura-fria-7807866-6263297.png?f=webp">
+    <title>Comandos</title>
+    <style>
+      body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("sustentabilidade.png") no-repeat fixed center ;
+ 
+
+  
+  text-align: center;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  display: inline-block;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  width: 2px 16px;
+} 
+.card button{
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  
+} 
+button:hover {
+  background-color: #0056b3;
+}
+
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+   
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="relatorio de analise.html">Relatorio de Analise</a>
+        <a href="http://192.168.0.107/">Estufa Temperatura</a>
+        <a href="comando.html">Controles</a>
+
+      </div>
+      <div class="card">
+        <div class="container">
+        <img id="Alface" src="./alf.jpg" alt="" style="width:90%">
+
+        <button onclick="document.getElementById('Alface').src='./alf.jpg'">Alface</button>
+        <button onclick="document.getElementById('Alface').src='./couve.webp'">Couve Flor</button>
+        <button onclick="document.getElementById('Alface').src='./rucu.png'">Rucula</button>
+        
+
+
+        </div>
+      </div>
+      <div class="card button">
+        <h3>Sistema de Refrigeração</h3>
+        <img id="motor OFF" src="./motor OFF.png" alt="Avatar" style="width:20%">
+        <img id="led OFF"src="./led_red.png" alt="Avatar" style="width:20%">
+        <img id="ventOFF"src="./ventOFF.png" alt="Avatar" style="width:20%">
+        
+        
+            <h5 >Motor</h5>
+            <button onclick="document.getElementById('motor OFF').src='./motor ON.jpg'">Ligar</button>
+            <button onclick="document.getElementById('motor OFF').src='./motor OFF.png'">Desligar</button>
+            
+            <h5>Iluminação</h5>
+            <button onclick="document.getElementById('led OFF').src='./led_green.png'">Ligar</button>
+            <button onclick="document.getElementById('led OFF').src='./led_red.png'">Desligar</button>
+            
+            <h5>Ventilação</h5>
+            <button onclick="document.getElementById('ventOFF').src='./ventON.png'">Ligar</button>
+            <button onclick="document.getElementById('ventOFF').src='./ventOFF.png'">Desligar</button>
+        </div>
+     
+
+
+
+</body>
+</html>
